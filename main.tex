@@ -39,17 +39,59 @@ Rather than treating AI as an autonomous educational designer, this study examin
 
 \section{Method: The AI-Assisted Development Process}
 
-The development workflow used in both classroom case studies followed an iterative teacher-guided AI-assisted process consisting of four recurring stages: initial prompting, AI generation, teacher evaluation, and iterative refinement. Rather than functioning as an autonomous design system, the generative AI model was used as a rapid prototyping partner that produced editable simulations, worksheets, and interface components in response to natural language instructions.
+The development workflow used across the classroom case studies followed an iterative, teacher-guided, human-in-the-loop process consisting of four recurring stages: initial conceptual prompting, AI generation, teacher-led pedagogical verification, and local iterative refinement. Rather than treating the generative AI system as an autonomous curricular designer, it was used as a rapid prototyping partner that produced editable simulations, worksheets, and interface components in response to natural language instructions.
 
-In the first stage, the teacher provided an initial prompt describing the target physics concept, intended classroom use, and desired interactivity. These prompts typically specified the educational objective rather than detailed programming instructions. For example, the initial diffraction simulation prompt focused on visualizing how wavelength, slit width, and screen distance affect the diffraction pattern, while later prompts requested associated digital measurement tools and worksheet integration.
+\subsection{Initial prompting and context setting}
 
-The second stage involved AI generation of HTML, CSS, JavaScript, and \LaTeX{} resources. These outputs included interactive simulations, digital rulers, animated visualization elements, and laboratory worksheets. The generated resources were then locally tested on the teacher's computer before classroom implementation. During the early development stages, several practical issues emerged, including unsuitable parameter ranges, inadequate fringe visibility, scaling inconsistencies, worksheet formatting problems, and operating-system-related file execution issues.
+In the first stage, the teacher provided open-ended prompts describing the target physics concept, intended classroom use, and desired student interaction. These prompts generally specified the educational objective rather than detailed programming instructions. In the Grade 10 diffraction case, the initial prompt asked for a simulation showing how wavelength ($\lambda$), slit width ($a$), and screen distance ($D$) affect the diffraction pattern and the width of the central maximum ($W$). Later prompts requested classroom-specific features such as improved fringe visibility, a digital measurement ruler, and worksheet integration. In the Grade 12 cases, the prompts were shorter and more operational, asking for simulations in which transformer voltage changed with primary and secondary turns, or in which LCR circuit quantities could be varied and observed.
 
-The third stage consisted of teacher evaluation and pedagogical verification. At this stage, the generated outputs were checked for physics accuracy, classroom usability, and alignment with curriculum requirements. Simulations were repeatedly modified to ensure physically meaningful parameter ranges, visually interpretable output, and compatibility with classroom projection systems and student devices. Additional pedagogical refinements included the incorporation of calibrated measurement rulers, error-analysis tasks, guided worksheet activities, and visual adjustments intended to improve conceptual accessibility for secondary students.
+\subsection{AI generation and script prototyping}
 
-The final stage involved iterative refinement through continued interaction with the AI system. The diffraction simulation required multiple cycles of refinement before a classroom-ready laboratory activity emerged. These interactions established preferred design patterns related to interface structure, visual layout, measurement integration, and worksheet formatting. When later Grade 12 simulations involving transformer behavior and LCR circuits were developed within the same extended interaction context, substantially shorter prompts produced usable initial outputs. Although this observation is not interpreted as formal model learning, it suggested that maintaining conversational continuity supported more efficient co-development of subsequent simulations.
+The second stage involved AI generation of standalone HTML, CSS, JavaScript, and fillable \LaTeX{} resources. The generated outputs included interactive simulations, digital rulers, animated visualization elements, and laboratory worksheets. The simulation scripts implemented standard school-level physics relationships at runtime. For the diffraction simulation, the generated code used the single-slit diffraction intensity relation,
+\begin{equation}
+\beta = \frac{\pi a \sin\theta}{\lambda}, \qquad I(\theta) = I_0 \left(\frac{\sin\beta}{\beta}\right)^2 .
+\end{equation}
+For the transformer simulation, the output voltage was linked to the turns ratio,
+\begin{equation}
+\frac{V_s}{V_p}=\frac{N_s}{N_p},
+\end{equation}
+while the LCR activity used standard expressions for inductive reactance, capacitive reactance, and impedance,
+\begin{equation}
+X_L=\omega L, \qquad X_C=\frac{1}{\omega C}, \qquad Z=\sqrt{R^2+(X_L-X_C)^2}.
+\end{equation}
+These formulae were not treated as novel contributions; rather, they provided the physics backbone for classroom visualizations and real-time numerical displays.
+
+\subsection{Teacher evaluation and scientific auditing}
+
+The third stage consisted of teacher evaluation, scientific checking, and classroom usability review. Generated outputs were tested locally before classroom use and were checked for physics accuracy, visual clarity, curriculum alignment, and practical deployability. In the early diffraction development cycle, a local execution issue occurred when saving HTML code through macOS TextEdit, because rich-text formatting could prevent the browser from interpreting the file as executable HTML. This led to revised deployment instructions emphasizing plain-text saving and browser-based execution.
+
+The teacher also audited parameter boundaries and visual scaling. In the diffraction case, the simulation required adjustment of slit-width and screen-distance ranges to avoid patterns that were either too compressed to measure or so wide that the first minima moved outside the visible screen. Additional refinements included brightness enhancement for secondary fringes, calibrated ruler placement, and a zoom adjustment so that students could measure the central maximum meaningfully. In the LCR activity, input intervals for inductance and capacitance were adjusted so that resonance and impedance changes remained observable within the intended frequency range.
+
+\subsection{Iterative refinement and warm-start development}
+
+The final stage involved iterative refinement through continued teacher--AI interaction. The Grade 10 diffraction simulation functioned as a cold-start case: it required several interaction cycles to move from a technically functional visualization to a classroom-ready virtual laboratory with measurement and worksheet components. Through this process, recurring design preferences were established, including range-slider controls, clear numerical readouts, visual emphasis on observable effects, and accompanying fillable worksheet structures.
+
+When the same extended AI interaction context was later used to create Grade 12 transformer and LCR simulations, substantially shorter prompts produced usable initial outputs. This is not interpreted as permanent model learning. Rather, it suggests that maintaining conversational continuity allowed previously established design patterns and pedagogical expectations to influence later outputs. For example, the transformer activity quickly adopted a familiar structure with voltage readouts, turn-number sliders, canvas-based visual representation, and worksheet tasks involving power and efficiency,
+\begin{equation}
+\eta = \frac{P_{\mathrm{out}}}{P_{\mathrm{in}}}\times 100\% .
+\end{equation}
 
 Both case studies therefore operated within a collaborative human-in-the-loop framework in which the teacher retained responsibility for pedagogical direction, scientific verification, classroom adaptation, and final deployment decisions. The AI system accelerated prototyping and code generation, while the teacher continuously filtered, corrected, and refined the outputs before classroom use.
+
+\begin{table}[htbp]
+\caption{Summary of the teacher--AI co-development process across the classroom cases.}
+\label{tab:dev_pipeline}
+\centering
+\begin{tabular}{p{2.6cm} p{3.0cm} p{3.1cm} p{4.4cm}}
+\hline
+\textbf{Case} & \textbf{Physics focus} & \textbf{Development pattern} & \textbf{Main pedagogical refinement} \\
+\hline
+Grade 10 & Single-slit diffraction & Cold-start iterative development & Fringe visibility, calibrated ruler, measurement and error-analysis worksheet \\
+Grade 12 & Transformer induction & Warm-start development & Voltage-ratio visualization, turns sliders, power and efficiency analysis \\
+Grade 12 & Series LCR circuit & Warm-start development & Real-time reactance, impedance, and resonance displays \\
+\hline
+\end{tabular}
+\end{table}
 
 \ack{Sample text inserted for demonstration.}
 
