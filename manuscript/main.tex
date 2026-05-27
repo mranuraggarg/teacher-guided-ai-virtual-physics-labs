@@ -39,7 +39,7 @@ Rather than treating AI as an autonomous educational designer, this study examin
 
 \section{Method: The AI-Assisted Development Process}
 
-The development workflow used across the classroom case studies followed an iterative, teacher-guided, human-in-the-loop (HITL) engineering process consisting of four recurring stages: initial conceptual prompting, AI generation, teacher-led pedagogical verification, and local iterative refinement. Rather than treating the generative AI system as an autonomous curricular designer, it was used as a rapid prototyping partner~\cite{Gao2023} that produced editable simulations, worksheets, and interface components in response to natural language instructions. This workflow aligns with emerging frameworks in educational technology that emphasize the necessity of keeping the educator central to auditing and anchoring AI-generated content within localized school contexts~\cite{lazaros2026, techreport2023}.
+The development workflow used across the classroom case studies followed an iterative, teacher-guided, human-in-the-loop (HITL) engineering process consisting of four recurring stages: initial conceptual prompting, AI generation, teacher-led pedagogical verification, and local iterative refinement. Rather than treating the generative AI system as an autonomous curricular designer, it was used as a rapid prototyping partner~\cite{li2024,suh2023} that produced editable simulations, worksheets, and interface components in response to natural language instructions. This workflow aligns with emerging frameworks in educational technology that emphasize the necessity of keeping the educator central to auditing and anchoring AI-generated content within localized school contexts~\cite{lazaros2026, techreport2023}.
 
 \subsection{Initial prompting and context setting}
 
@@ -47,7 +47,7 @@ In the first stage, the teacher provided open-ended prompts describing the targe
 
 \subsection{AI generation and script prototyping}
 
-The second stage involved AI generation of standalone HTML, CSS, JavaScript, and fillable \LaTeX{} resources. The generated outputs included interactive simulations, digital rulers, animated visualization elements, and laboratory worksheets. The simulation scripts implemented standard school-level physics relationships at runtime to drive real-time graphical rendering~\cite{Rutten2012}. For the diffraction simulation, the generated code used the single-slit diffraction intensity relation,
+The second stage involved AI generation of standalone HTML, CSS, JavaScript, and fillable \LaTeX{} resources. The generated outputs included interactive simulations, digital rulers, animated visualization elements, and laboratory worksheets. The simulation scripts implemented standard school-level physics relationships at runtime to drive real-time graphical rendering~\cite{rutten2012}. For the diffraction simulation, the generated code used the single-slit diffraction intensity relation,
 \begin{equation}
 \beta = \frac{\pi a \sin\theta}{\lambda}, \qquad I(\theta) = I_0 \left(\frac{\sin\beta}{\beta}\right)^2 .
 \end{equation}
@@ -186,7 +186,7 @@ Overall, the cases support a cautious but constructive view of AI-assisted instr
 
 This classroom case study illustrates how generative AI can support the rapid development of curriculum-linked virtual physics laboratories when embedded within a teacher-led refinement process. The diffraction case showed the importance of iterative pedagogical correction, while the transformer and LCR cases suggested that established design patterns can be reused across topics. The findings should be interpreted as exploratory classroom evidence rather than proof of learning gains, but they indicate that students perceived the tools as usable, engaging, and helpful for visualizing abstract physics relationships. The central implication is that AI can assist physics teachers in creating adaptable digital laboratories, provided that the teacher remains responsible for scientific verification, classroom fit, and final instructional judgement.
 
-\ack{Sample text inserted for demonstration.}
+\ack{The author thanks the students who participated in the classroom activities and provided feedback on the digital laboratory tools. The author also acknowledges the support of Khalifa Bin Zayed School and the Ministry of Education, United Arab Emirates, for providing the teaching context in which these classroom activities were developed and implemented.}
 
 \funding{Sample text inserted for demonstration.}
 % This section is a list of funder names and grant numbers
