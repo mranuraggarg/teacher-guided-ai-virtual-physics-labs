@@ -1,0 +1,157 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}documentclass}\PYG{n+na}{[11pt,a4paper]}\PYG{n+nb}{\PYGZob{}}article\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+na}{[utf8]}\PYG{n+nb}{\PYGZob{}}inputenc\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+na}{[margin=0.7in]}\PYG{n+nb}{\PYGZob{}}geometry\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}graphicx\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}xcolor\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}colortbl\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} Fixed the \PYGZdq{}LightCyan\PYGZdq{} text issue}
+
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}tcolorbox\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}hyperref\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}amsmath\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}array\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{c}{\PYGZpc{} Define Theme Colors}
+
+\PYG{k}{\PYGZbs{}definecolor}\PYG{n+nb}{\PYGZob{}}MainBlue\PYG{n+nb}{\PYGZcb{}\PYGZob{}}HTML\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0056b3\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}definecolor}\PYG{n+nb}{\PYGZob{}}HeaderBlue\PYG{n+nb}{\PYGZcb{}\PYGZob{}}HTML\PYG{n+nb}{\PYGZcb{}\PYGZob{}}004a99\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}definecolor}\PYG{n+nb}{\PYGZob{}}TableCyan\PYG{n+nb}{\PYGZcb{}\PYGZob{}}HTML\PYG{n+nb}{\PYGZcb{}\PYGZob{}}E0F2F1\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{c}{\PYGZpc{} \PYGZhy{}\PYGZhy{}\PYGZhy{} FIXED HEADER SECTION \PYGZhy{}\PYGZhy{}\PYGZhy{}}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}Form\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}noindent}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}minipage\PYG{n+nb}{\PYGZcb{}}[c]\PYG{n+nb}{\PYGZob{}}0.15\PYG{k}{\PYGZbs{}textwidth}\PYG{n+nb}{\PYGZcb{}}
+
+
+    \PYG{k}{\PYGZbs{}includegraphics}\PYG{n+na}{[width=2.2cm]}\PYG{n+nb}{\PYGZob{}}moe\PYG{n+nb}{\PYGZus{}}logo.webp\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}minipage\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}minipage\PYG{n+nb}{\PYGZcb{}}[c]\PYG{n+nb}{\PYGZob{}}0.65\PYG{k}{\PYGZbs{}textwidth}\PYG{n+nb}{\PYGZcb{}}
+
+    \PYG{k}{\PYGZbs{}centering}
+
+    \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}LARGE} \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}textcolor}\PYG{n+nb}{\PYGZob{}}MainBlue\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Khalifa Bin Zayed School\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZcb{}} \PYG{k}{\PYGZbs{}\PYGZbs{}}
+
+    \PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}1mm\PYG{n+nb}{\PYGZcb{}}
+
+    \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}large} \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}Physics Department \PYGZhy{} Grade 10 Advance\PYG{n+nb}{\PYGZcb{}\PYGZcb{}} \PYG{k}{\PYGZbs{}\PYGZbs{}}
+
+    \PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}1mm\PYG{n+nb}{\PYGZcb{}}
+
+    \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}Module 17, Lesson 2: Diffraction Analysis Lab\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}minipage\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}minipage\PYG{n+nb}{\PYGZcb{}}[c]\PYG{n+nb}{\PYGZob{}}0.20\PYG{k}{\PYGZbs{}textwidth}\PYG{n+nb}{\PYGZcb{}}
+
+    \PYG{k}{\PYGZbs{}flushright} \PYG{k}{\PYGZbs{}small}
+
+    \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}Subject:\PYG{n+nb}{\PYGZcb{}} Physics \PYG{k}{\PYGZbs{}\PYGZbs{}}
+
+    \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}Grade:\PYG{n+nb}{\PYGZcb{}} 10 ADV
+
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}minipage\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}4mm\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}center\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}rule}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}textwidth}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}1pt\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}center\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}2mm\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{c}{\PYGZpc{} \PYGZhy{}\PYGZhy{}\PYGZhy{} STUDENT INFO \PYGZhy{}\PYGZhy{}\PYGZhy{}}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tcolorbox\PYG{n+nb}{\PYGZcb{}}[colback=TableCyan!50, colframe=HeaderBlue, title=Student Identification, fonttitle=\PYG{k}{\PYGZbs{}bfseries}]
+
+    \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}Name:\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=studentName, width=6.5cm, bordercolor=MainBlue!30]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{k}{\PYGZbs{}hfill}
+
+    \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}Class:\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=studentClass, width=2cm, bordercolor=MainBlue!30]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{k}{\PYGZbs{}hfill}
+
+    \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}Date:\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=labDate, width=2.5cm, bordercolor=MainBlue!30]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tcolorbox\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}section*}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}textcolor}\PYG{n+nb}{\PYGZob{}}MainBlue\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Objective\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+
+To verify the single\PYGZhy{}slit diffraction formula \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{W }\PYG{o}{=}\PYG{n+nb}{ }\PYG{n+nv}{\PYGZbs{}frac}\PYG{n+nb}{\PYGZob{}}\PYG{l+m}{2}\PYG{n+nb}{ }\PYG{n+nv}{\PYGZbs{}lambda}\PYG{n+nb}{ D\PYGZcb{}\PYGZob{}a\PYGZcb{}}\PYG{l+s}{\PYGZdl{}} by measuring the central maximum width using a virtual precision ruler.
+
+\PYG{k}{\PYGZbs{}section*}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}textcolor}\PYG{n+nb}{\PYGZob{}}MainBlue\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Theory \PYG{k}{\PYGZbs{}\PYGZam{}} Setup\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+
+\PYG{l+s+sb}{\PYGZbs{}[}\PYG{n+nb}{ W }\PYG{o}{=}\PYG{n+nb}{ }\PYG{n+nv}{\PYGZbs{}text}\PYG{n+nb}{\PYGZob{}Total Width of Central Maximum\PYGZcb{} }\PYG{n+nv}{\PYGZbs{}quad}\PYG{n+nb}{ | }\PYG{n+nv}{\PYGZbs{}quad}\PYG{n+nb}{ }\PYG{n+nv}{\PYGZbs{}lambda}\PYG{n+nb}{ }\PYG{o}{=}\PYG{n+nb}{ }\PYG{n+nv}{\PYGZbs{}text}\PYG{n+nb}{\PYGZob{}Wavelength\PYGZcb{} }\PYG{l+s}{\PYGZbs{}]}
+
+\PYG{l+s+sb}{\PYGZbs{}[}\PYG{n+nb}{ a }\PYG{o}{=}\PYG{n+nb}{ }\PYG{n+nv}{\PYGZbs{}text}\PYG{n+nb}{\PYGZob{}Slit Width\PYGZcb{} }\PYG{n+nv}{\PYGZbs{}quad}\PYG{n+nb}{ | }\PYG{n+nv}{\PYGZbs{}quad}\PYG{n+nb}{ D }\PYG{o}{=}\PYG{n+nb}{ }\PYG{n+nv}{\PYGZbs{}text}\PYG{n+nb}{\PYGZob{}Screen Distance\PYGZcb{} }\PYG{l+s}{\PYGZbs{}]}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}center\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tcolorbox\PYG{n+nb}{\PYGZcb{}}[width=12cm, colback=white, colframe=gray!30, arc=0mm, title=Experiment Layout]
+
+    \PYG{k}{\PYGZbs{}centering}
+
+    \PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}5mm\PYG{n+nb}{\PYGZcb{}}
+
+    \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}Slit (\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{a}\PYG{l+s}{\PYGZdl{}})\PYG{n+nb}{\PYGZcb{}} \PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}xrightarrow}\PYG{n+nb}{\PYGZob{}}\PYG{n+nv}{\PYGZbs{}hspace}\PYG{n+nb}{\PYGZob{}}\PYG{l+m}{1}\PYG{n+nb}{cm\PYGZcb{} D }\PYG{n+nv}{\PYGZbs{}hspace}\PYG{n+nb}{\PYGZob{}}\PYG{l+m}{1}\PYG{n+nb}{cm\PYGZcb{}\PYGZcb{}}\PYG{l+s}{\PYGZdl{}} \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}Screen\PYG{n+nb}{\PYGZcb{}} \PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}cases\PYGZcb{} }\PYG{n+nv}{\PYGZbs{}text}\PYG{n+nb}{\PYGZob{}}\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}}\PYG{n+nb}{\PYGZcb{} }\PYG{n+nv}{\PYGZbs{}\PYGZbs{}}\PYG{n+nb}{ }\PYG{n+nv}{\PYGZbs{}text}\PYG{n+nb}{\PYGZob{}Central Max }\PYG{o}{(}\PYG{l+s}{\PYGZdl{}}W\PYG{l+s}{\PYGZdl{}}\PYG{o}{)}\PYG{n+nb}{\PYGZcb{} }\PYG{n+nv}{\PYGZbs{}\PYGZbs{}}\PYG{n+nb}{ }\PYG{n+nv}{\PYGZbs{}text}\PYG{n+nb}{\PYGZob{}}\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}}\PYG{n+nb}{\PYGZcb{} }\PYG{n+nv}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}cases\PYGZcb{}}\PYG{l+s}{\PYGZdl{}}
+
+    \PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}5mm\PYG{n+nb}{\PYGZcb{}}
+
+
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tcolorbox\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}center\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}section*}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}textcolor}\PYG{n+nb}{\PYGZob{}}MainBlue\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Observation Table\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}arraystretch}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}2.0\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tabular\PYG{n+nb}{\PYGZcb{}\PYGZob{}}|c|c|c|c|p\PYG{n+nb}{\PYGZob{}}2.5cm\PYG{n+nb}{\PYGZcb{}}|p\PYG{n+nb}{\PYGZob{}}2.5cm\PYG{n+nb}{\PYGZcb{}}|c|\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}hline}
+
+\PYG{k}{\PYGZbs{}rowcolor}\PYG{n+nb}{\PYGZob{}}TableCyan\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}Tr.\PYG{n+nb}{\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}lambda}\PYG{l+s}{\PYGZdl{}} (nm)\PYG{n+nb}{\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{a}\PYG{l+s}{\PYGZdl{}} (mm)\PYG{n+nb}{\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{D}\PYG{l+s}{\PYGZdl{}} (m)\PYG{n+nb}{\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}Measured \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{W}\PYG{l+s}{\PYGZdl{}} (mm)\PYG{n+nb}{\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}Theor. \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{W}\PYG{l+s}{\PYGZdl{}} (mm)\PYG{n+nb}{\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}\PYGZpc{}} Error\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}\PYGZbs{}} \PYG{k}{\PYGZbs{}hline}
+
+1 \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=l1, width=1.2cm]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=a1, width=1.2cm]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=d1, width=1.2cm]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=m1, width=2.2cm]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=t1, width=2.2cm]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=e1, width=1.5cm]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{k}{\PYGZbs{}\PYGZbs{}} \PYG{k}{\PYGZbs{}hline}
+
+2 \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=l2, width=1.2cm]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=a2, width=1.2cm]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=d2, width=1.2cm]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=m2, width=2.2cm]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=t2, width=2.2cm]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=e2, width=1.5cm]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{k}{\PYGZbs{}\PYGZbs{}} \PYG{k}{\PYGZbs{}hline}
+
+3 \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=l3, width=1.2cm]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=a3, width=1.2cm]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=d3, width=1.2cm]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=m3, width=2.2cm]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=t3, width=2.2cm]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=e3, width=1.5cm]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{k}{\PYGZbs{}\PYGZbs{}} \PYG{k}{\PYGZbs{}hline}
+
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tabular\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}4mm\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}noindent} \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}Average \PYG{k}{\PYGZbs{}\PYGZpc{}} Error:\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=avgE, width=3cm, bordercolor=MainBlue!30]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}section*}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}textcolor}\PYG{n+nb}{\PYGZob{}}MainBlue\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Viva Voce Questions\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}1. Concept:\PYG{n+nb}{\PYGZcb{}} If you switch from a Red Laser to a Blue Laser, does the central fringe get \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}wider\PYG{n+nb}{\PYGZcb{}} or \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}narrower\PYG{n+nb}{\PYGZcb{}}? (Justify using the formula). \PYG{k}{\PYGZbs{}\PYGZbs{}}
+
+\PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=viva1, multiline=true, width=\PYGZbs{}textwidth, height=1.5cm, bordercolor=gray!30]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}3mm\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}2. Experiment:\PYG{n+nb}{\PYGZcb{}} Why is it more accurate to measure the total width (\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{W}\PYG{l+s}{\PYGZdl{}}) rather than just the distance from the center to the first dark fringe? \PYG{k}{\PYGZbs{}\PYGZbs{}}
+
+\PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=viva2, multiline=true, width=\PYGZbs{}textwidth, height=1.5cm, bordercolor=gray!30]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}section*}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}textcolor}\PYG{n+nb}{\PYGZob{}}MainBlue\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Conclusion\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}TextField}\PYG{n+na}{[name=conc, multiline=true, width=\PYGZbs{}textwidth, height=2.5cm, bordercolor=gray!30]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}Form\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+\end{MintedVerbatim}

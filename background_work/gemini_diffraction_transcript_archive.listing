@@ -1,0 +1,155 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=0.7in]{geometry}
+
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+
+\usepackage{colortbl} % Fixed the "LightCyan" text issue
+
+\usepackage{tcolorbox}
+
+\usepackage{hyperref}
+
+\usepackage{amsmath}
+
+\usepackage{array}
+
+% Define Theme Colors
+
+\definecolor{MainBlue}{HTML}{0056b3}
+
+\definecolor{HeaderBlue}{HTML}{004a99}
+
+\definecolor{TableCyan}{HTML}{E0F2F1}
+
+\begin{document}
+
+% --- FIXED HEADER SECTION ---
+
+\begin{Form}
+
+\noindent
+
+\begin{minipage}[c]{0.15\textwidth}
+
+
+    \includegraphics[width=2.2cm]{moe_logo.webp}
+
+\end{minipage}%
+
+\begin{minipage}[c]{0.65\textwidth}
+
+    \centering
+
+    {\LARGE \textbf{\textcolor{MainBlue}{Khalifa Bin Zayed School}}} \\
+
+    \vspace{1mm}
+
+    {\large \textbf{Physics Department - Grade 10 Advance}} \\
+
+    \vspace{1mm}
+
+    \textbf{Module 17, Lesson 2: Diffraction Analysis Lab}
+
+\end{minipage}%
+
+\begin{minipage}[c]{0.20\textwidth}
+
+    \flushright \small
+
+    \textbf{Subject:} Physics \\
+
+    \textbf{Grade:} 10 ADV
+
+\end{minipage}
+
+\vspace{4mm}
+
+\begin{center} \rule{\textwidth}{1pt} \end{center}
+
+\vspace{2mm}
+
+% --- STUDENT INFO ---
+
+\begin{tcolorbox}[colback=TableCyan!50, colframe=HeaderBlue, title=Student Identification, fonttitle=\bfseries]
+
+    \textbf{Name:} \TextField[name=studentName, width=6.5cm, bordercolor=MainBlue!30]{} \hfill
+
+    \textbf{Class:} \TextField[name=studentClass, width=2cm, bordercolor=MainBlue!30]{} \hfill
+
+    \textbf{Date:} \TextField[name=labDate, width=2.5cm, bordercolor=MainBlue!30]{}
+
+\end{tcolorbox}
+
+\section*{\textcolor{MainBlue}{Objective}}
+
+To verify the single-slit diffraction formula $W = \frac{2 \lambda D}{a}$ by measuring the central maximum width using a virtual precision ruler.
+
+\section*{\textcolor{MainBlue}{Theory \& Setup}}
+
+\[ W = \text{Total Width of Central Maximum} \quad | \quad \lambda = \text{Wavelength} \]
+
+\[ a = \text{Slit Width} \quad | \quad D = \text{Screen Distance} \]
+
+\begin{center}
+
+\begin{tcolorbox}[width=12cm, colback=white, colframe=gray!30, arc=0mm, title=Experiment Layout]
+
+    \centering
+
+    \vspace{5mm}
+
+    \textbf{Slit ($a$)} $\xrightarrow{\hspace{1cm} D \hspace{1cm}}$ \textbf{Screen} $\begin{cases} \text{---} \\ \text{Central Max ($W$)} \\ \text{---} \end{cases}$
+
+    \vspace{5mm}
+
+
+\end{tcolorbox}
+
+\end{center}
+
+\section*{\textcolor{MainBlue}{Observation Table}}
+
+\renewcommand{\arraystretch}{2.0}
+
+\begin{tabular}{|c|c|c|c|p{2.5cm}|p{2.5cm}|c|}
+
+\hline
+
+\rowcolor{TableCyan} \textbf{Tr.} & \textbf{$\lambda$ (nm)} & \textbf{$a$ (mm)} & \textbf{$D$ (m)} & \textbf{Measured $W$ (mm)} & \textbf{Theor. $W$ (mm)} & \textbf{\% Error} \\ \hline
+
+1 & \TextField[name=l1, width=1.2cm]{} & \TextField[name=a1, width=1.2cm]{} & \TextField[name=d1, width=1.2cm]{} & \TextField[name=m1, width=2.2cm]{} & \TextField[name=t1, width=2.2cm]{} & \TextField[name=e1, width=1.5cm]{} \\ \hline
+
+2 & \TextField[name=l2, width=1.2cm]{} & \TextField[name=a2, width=1.2cm]{} & \TextField[name=d2, width=1.2cm]{} & \TextField[name=m2, width=2.2cm]{} & \TextField[name=t2, width=2.2cm]{} & \TextField[name=e2, width=1.5cm]{} \\ \hline
+
+3 & \TextField[name=l3, width=1.2cm]{} & \TextField[name=a3, width=1.2cm]{} & \TextField[name=d3, width=1.2cm]{} & \TextField[name=m3, width=2.2cm]{} & \TextField[name=t3, width=2.2cm]{} & \TextField[name=e3, width=1.5cm]{} \\ \hline
+
+\end{tabular}
+
+\vspace{4mm}
+
+\noindent \textbf{Average \% Error:} \TextField[name=avgE, width=3cm, bordercolor=MainBlue!30]{}
+
+\section*{\textcolor{MainBlue}{Viva Voce Questions}}
+
+\textbf{1. Concept:} If you switch from a Red Laser to a Blue Laser, does the central fringe get \textbf{wider} or \textbf{narrower}? (Justify using the formula). \\
+
+\TextField[name=viva1, multiline=true, width=\textwidth, height=1.5cm, bordercolor=gray!30]{}
+
+\vspace{3mm}
+
+\textbf{2. Experiment:} Why is it more accurate to measure the total width ($W$) rather than just the distance from the center to the first dark fringe? \\
+
+\TextField[name=viva2, multiline=true, width=\textwidth, height=1.5cm, bordercolor=gray!30]{}
+
+\section*{\textcolor{MainBlue}{Conclusion}}
+
+\TextField[name=conc, multiline=true, width=\textwidth, height=2.5cm, bordercolor=gray!30]{}
+
+\end{Form}
+
+\end{document}
