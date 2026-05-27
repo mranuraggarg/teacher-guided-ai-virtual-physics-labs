@@ -27,15 +27,15 @@ This classroom case study examines the teacher-guided AI-assisted development of
 
 \section{Introduction}
 
-Interactive simulations and virtual laboratories have become increasingly important tools in physics education, particularly for topics involving abstract processes, dynamic systems, or experiments that are difficult to reproduce consistently in school laboratories. Simulations can support conceptual visualization, inquiry-based learning, and rapid exploration of relationships between physical variables. The educational value of interactive physics simulations has been demonstrated through projects such as PhET, which emphasized visualization, interactivity, and conceptual exploration in physics teaching \cite{finkelstein2006}. Earlier work on simulation-based learning environments also highlighted the importance of teacher support and authoring workflows during simulation development \cite{vanjoolingen1997}. Research reviews have further reported positive learning effects of computer simulations in science education when they are carefully integrated into instruction and inquiry activities \cite{rutten2012}. However, the development of custom educational simulations often requires programming experience, substantial preparation time, and repeated testing to ensure that the final tool remains pedagogically suitable for classroom use.
+Interactive simulations and virtual laboratories have become increasingly important tools in physics education, particularly for topics involving abstract processes, dynamic systems, or experiments that are difficult to reproduce consistently in school laboratories. Simulations can support conceptual visualization, inquiry-based learning, and rapid exploration of relationships between physical variables. The educational value of interactive physics simulations has been demonstrated through projects such as PhET, which emphasized visualization, interactivity, and conceptual exploration in physics teaching \cite{finkelstein2006,wieman2010}. Broader reviews of digital games, simulations, and science education have also reported positive learning effects when simulations are carefully integrated with teacher support, lesson design, and inquiry activities \cite{clark2015,rutten2012,smetana2012,banda2021}. However, the development of custom educational simulations often requires programming experience, substantial preparation time, and repeated testing to ensure that the final tool remains pedagogically suitable for classroom use.
 
 Within secondary physics curricula, topics such as single-slit diffraction require students to simultaneously interpret how wavelength ($\lambda$), slit width ($a$), and screen distance ($D$) influence the width of the central maximum. Although textbook diagrams provide static representations of diffraction patterns, students often have limited opportunities to dynamically manipulate these variables or conduct measurement-based exploration during regular classroom instruction. Consequently, converting a visualization into a usable classroom laboratory frequently requires additional features such as calibrated measurement tools, constrained physical parameter ranges, and worksheet integration.
 
-Recent advances in generative artificial intelligence (AI) systems have introduced new possibilities for rapid prototyping of educational materials, including code generation, worksheet design, and interactive visualization tools. Current research in AI in education has explored both the opportunities and limitations associated with these technologies \cite{holmes2022}. Studies have also highlighted the evolving role of teachers in AI-supported educational design and implementation \cite{celik2022}. At the same time, generative AI has raised new questions regarding instructional design, hybrid authorship, and collaborative human--AI workflows in educational settings \cite{hodges2023}. Despite growing interest in AI-assisted educational development, comparatively fewer studies have examined how physics teachers may iteratively collaborate with generative AI systems to create classroom-oriented learning tools while retaining pedagogical control over the design process.
+Recent advances in generative artificial intelligence (AI) systems have introduced new possibilities for rapid prototyping of educational materials, including code generation, worksheet design, and interactive visualization tools. Current research in AI in education has explored both the opportunities and limitations associated with these technologies \cite{holmes2022,baidoo2025}. Studies have also highlighted the evolving role of teachers in AI-supported educational design and implementation \cite{celik2022}. At the same time, generative AI has raised new questions regarding instructional design, hybrid authorship, and collaborative human--AI workflows in educational settings \cite{hodges2024}. Work on generative AI in software engineering education further suggests that code-generation tools can support practical prototyping when combined with appropriate verification and instructional oversight \cite{li2024}. Despite growing interest in AI-assisted educational development, comparatively fewer studies have examined how physics teachers may iteratively collaborate with generative AI systems to create classroom-oriented learning tools while retaining pedagogical control over the design process.
 
 This paper presents two classroom case studies involving teacher-guided AI-assisted development of virtual physics laboratory activities for secondary education. In the first case, a Grade 10 single-slit diffraction simulation was iteratively developed to support visualization, measurement, and error analysis during a diffraction laboratory activity. The development process involved repeated refinement of fringe visibility, parameter ranges, measurement calibration, and digital worksheet integration to align the simulation with classroom requirements. In the second case, a Grade 12 transformer simulation was developed using a substantially shorter prompting process after design patterns and pedagogical expectations had already been established through the earlier interaction. Together, these cases provide insight into how generative AI may function as a rapid prototyping partner during simulation development while highlighting the continuing importance of teacher guidance, physics verification, and classroom adaptation.
 
-Rather than treating AI as an autonomous educational designer, this study examines a collaborative workflow in which the teacher repeatedly evaluated outputs, corrected unsuitable features, refined the classroom usability of the simulations, and integrated the resulting tools into curriculum-linked learning activities. The paper focuses on the development workflow, classroom implementation, and exploratory student feedback associated with these AI-assisted virtual laboratories.
+Rather than treating AI as an autonomous educational designer, this study examines a collaborative human-in-the-loop workflow in which the teacher repeatedly evaluated outputs, corrected unsuitable features, refined the classroom usability of the simulations, and integrated the resulting tools into curriculum-linked learning activities. This framing is important because AI-generated code may still require expert checking, debugging, and validation before classroom use, particularly in physics contexts where non-physical assumptions or incorrect parameter choices can undermine learning \cite{huang2026,lazaros2026}. The paper focuses on the development workflow, classroom implementation, and exploratory student feedback associated with these AI-assisted virtual laboratories.
 
 % \begin{figure}
 %  \centering
@@ -82,24 +82,52 @@ Data row 3 & 3.0 & 3.5 & 4.0 \\
 
 
 
+
 \section*{References}
 
-\begin{thebibliography}{9}
+\begin{thebibliography}{99}
 
 \bibitem{finkelstein2006}
-Finkelstein N, Adams W, Keller C, Perkins K and Wieman C 2006 \textit{High-Tech Tools for Teaching Physics: The Physics Education Technology Project} Journal of Online Learning and Teaching \textbf{2}(3)
+Finkelstein N, Adams W, Keller C, Perkins K and Wieman C 2006 High-Tech Tools for Teaching Physics: The Physics Education Technology Project \textit{Journal of Online Learning and Teaching} \textbf{2}(3)
 
-\bibitem{vanjoolingen1997}
-van Joolingen W 1997 \textit{The Authoring Environment SIMQUEST and the Need for Author Support} in de Jong A J M (ed) \textit{Supporting Authors in the Design of Simulation Based Learning Environments} (Enschede: University of Twente) pp 1--13
+\bibitem{wieman2010}
+Wieman C E, Adams W K, Loeblein P and Perkins K K 2010 Teaching Physics Using PhET Simulations \textit{The Physics Teacher} \textbf{48}(4) 225--227 doi:10.1119/1.3361987
+
+\bibitem{clark2015}
+Clark D B, Tanner-Smith E E and Killingsworth S S 2015 Digital Games, Simulations, and Learning: A Systematic Review and Meta-Analysis \textit{Review of Educational Research} \textbf{86}(1) 79--122
+
+\bibitem{rutten2012}
+Rutten N, van Joolingen W R and van der Veen J T 2012 The learning effects of computer simulations in science education \textit{Computers \& Education} \textbf{58}(1) 136--153 doi:10.1016/j.compedu.2011.07.017
+
+\bibitem{smetana2012}
+Smetana L K and Bell R L 2012 Computer Simulations to Support Science Instruction and Learning: A critical review of the literature \textit{International Journal of Science Education} \textbf{34}(9) 1337--1370 doi:10.1080/09500693.2011.605182
+
+\bibitem{banda2021}
+Banda H 2021 Effect of integrating physics education technology simulations on students' conceptual understanding in physics: A review of literature doi:10.1103/PHYSREVPHYSEDUCRES.17.023108
+
+\bibitem{sellberg2026}
+Sellberg C and Lindwall O 2026 Simulation-based training in professional education: learning, participation, and instructional design \textit{Instructional Science} \textbf{54} 9 doi:10.1007/s11251-025-09763-2
 
 \bibitem{holmes2022}
-Holmes W and Tuomi I 2022 \textit{State of the Art and Practice in AI in Education} European Journal of Education \textbf{57}(4) 542--570
+Holmes W and Tuomi I 2022 State of the Art and Practice in AI in Education \textit{European Journal of Education} \textbf{57}(4) 542--570 doi:10.1111/ejed.12533
 
 \bibitem{celik2022}
-Celik I, Dindar M, Muukkonen H and Jarvela S 2022 \textit{The Promises and Challenges of Artificial Intelligence for Teachers: A Systematic Review of Research} TechTrends \textbf{66}(4) 616--630
+Celik I, Dindar M, Muukkonen H and Jarvela S 2022 The Promises and Challenges of Artificial Intelligence for Teachers: A Systematic Review of Research \textit{TechTrends} \textbf{66}(4) 616--630 doi:10.1007/s11528-022-00715-y
 
-\bibitem{hodges2023}
-Hodges C B and Kirschner P A 2023 \textit{Innovation of Instructional Design and Assessment in the Age of Generative Artificial Intelligence} TechTrends \textbf{68}(1) 195--199
+\bibitem{hodges2024}
+Hodges C B and Kirschner P A 2024 Innovation of Instructional Design and Assessment in the Age of Generative Artificial Intelligence \textit{TechTrends} \textbf{68} 195--199 doi:10.1007/s11528-023-00926-x
+
+\bibitem{li2024}
+Li Y, Keung J and Ma X 2024 Integrating Generative AI in Software Engineering Education: Practical Strategies \textit{2024 International Symposium on Educational Technology (ISET)} 49--53 doi:10.1109/ISET61814.2024.00019
+
+\bibitem{baidoo2025}
+Baidoo-Anu D and Ansah L O 2025 Education in the Era of Generative Artificial Intelligence (AI): Understanding the Potential Benefits of ChatGPT in Promoting Teaching and Learning \textit{SSRN} Available at: https://papers.ssrn.com/sol3/papers.cfm?abstract\_id=4337484
+
+\bibitem{huang2026}
+Huang T, Ren Z, Huang Y et al. 2026 Hallucination detection in LLM code generation: A sampling-based consensus verification approach \textit{Automated Software Engineering} \textbf{33} 70 doi:10.1007/s10515-026-00605-0
+
+\bibitem{lazaros2026}
+Lazaros K, Vrahatis A G and Kotsiantis S 2026 Human-in-the-Loop Artificial Intelligence: A Systematic Review of Concepts, Methods, and Applications \textit{Entropy} \textbf{28}(4) 377 doi:10.3390/e28040377
 
 \end{thebibliography}
 
