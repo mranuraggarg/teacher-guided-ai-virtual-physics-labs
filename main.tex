@@ -37,35 +37,19 @@ This paper presents two classroom case studies involving teacher-guided AI-assis
 
 Rather than treating AI as an autonomous educational designer, this study examines a collaborative human-in-the-loop workflow in which the teacher repeatedly evaluated outputs, corrected unsuitable features, refined the classroom usability of the simulations, and integrated the resulting tools into curriculum-linked learning activities. This framing is important because AI-generated code may still require expert checking, debugging, and validation before classroom use, particularly in physics contexts where non-physical assumptions or incorrect parameter choices can undermine learning \cite{huang2026,lazaros2026}. The paper focuses on the development workflow, classroom implementation, and exploratory student feedback associated with these AI-assisted virtual laboratories.
 
-% \begin{figure}
-%  \centering
-%         \includegraphics[width=0.5\textwidth]{figure1}
-%  \caption{Text describing the figure and the main conclusions drawn from it. To make your figures accessible to as many readers as possible, try to avoid using colour as the only means of conveying information. For example, in charts and graphs use different line styles and symbols. Further information is available in the online guide: \href{https://publishingsupport.iopscience.iop.org/publishing-support/authors/authoring-for-journals/writing-journal-article/\#figures}{https://publishingsupport.iopscience.iop.org/publishing-support/authors/authoring-for-journals/writing-journal-article/\#figures}}
-% \label{fig1}
-% \end{figure}
+\section{Method: The AI-Assisted Development Process}
 
+The development workflow used in both classroom case studies followed an iterative teacher-guided AI-assisted process consisting of four recurring stages: initial prompting, AI generation, teacher evaluation, and iterative refinement. Rather than functioning as an autonomous design system, the generative AI model was used as a rapid prototyping partner that produced editable simulations, worksheets, and interface components in response to natural language instructions.
 
-\begin{table}
-\caption{Caption text describing the table. Adapt the template table below or replace with a new table. To add more tables, copy and paste the whole {\tt \textbackslash begin\{table\}...\textbackslash end\{table\}} block.}
-\centering
-\begin{tabular}{l c c c}
-\hline
-Column heading & Column heading & Column heading & Column heading \\
-\hline
-Data row 1 & 1.0 & 1.5 & 2.0 \\
-Data row 2 & 2.0 & 2.5 & 3.0 \\
-Data row 3 & 3.0 & 3.5 & 4.0 \\
-\hline
-\end{tabular}
-\label{tab1}
-\end{table}
+In the first stage, the teacher provided an initial prompt describing the target physics concept, intended classroom use, and desired interactivity. These prompts typically specified the educational objective rather than detailed programming instructions. For example, the initial diffraction simulation prompt focused on visualizing how wavelength, slit width, and screen distance affect the diffraction pattern, while later prompts requested associated digital measurement tools and worksheet integration.
 
-%
-% Each of the commands below will create an unnumbered section with the appropriate heading.
-% Remove any sections that are not relevant for your article.
-% All sections except suppdata will be removed if the [anonymous] option is used.
-% See iopjournal-guidelines.pdf for more information.
-%
+The second stage involved AI generation of HTML, CSS, JavaScript, and \LaTeX{} resources. These outputs included interactive simulations, digital rulers, animated visualization elements, and laboratory worksheets. The generated resources were then locally tested on the teacher's computer before classroom implementation. During the early development stages, several practical issues emerged, including unsuitable parameter ranges, inadequate fringe visibility, scaling inconsistencies, worksheet formatting problems, and operating-system-related file execution issues.
+
+The third stage consisted of teacher evaluation and pedagogical verification. At this stage, the generated outputs were checked for physics accuracy, classroom usability, and alignment with curriculum requirements. Simulations were repeatedly modified to ensure physically meaningful parameter ranges, visually interpretable output, and compatibility with classroom projection systems and student devices. Additional pedagogical refinements included the incorporation of calibrated measurement rulers, error-analysis tasks, guided worksheet activities, and visual adjustments intended to improve conceptual accessibility for secondary students.
+
+The final stage involved iterative refinement through continued interaction with the AI system. The diffraction simulation required multiple cycles of refinement before a classroom-ready laboratory activity emerged. These interactions established preferred design patterns related to interface structure, visual layout, measurement integration, and worksheet formatting. When later Grade 12 simulations involving transformer behavior and LCR circuits were developed within the same extended interaction context, substantially shorter prompts produced usable initial outputs. Although this observation is not interpreted as formal model learning, it suggested that maintaining conversational continuity supported more efficient co-development of subsequent simulations.
+
+Both case studies therefore operated within a collaborative human-in-the-loop framework in which the teacher retained responsibility for pedagogical direction, scientific verification, classroom adaptation, and final deployment decisions. The AI system accelerated prototyping and code generation, while the teacher continuously filtered, corrected, and refined the outputs before classroom use.
 
 \ack{Sample text inserted for demonstration.}
 
