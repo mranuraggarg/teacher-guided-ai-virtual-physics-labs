@@ -14,3 +14,11 @@
 *.toc
 _minted*/
 **/_minted*/
+
+# Local exported simulation drafts
+diffraction_*.html
+transformer_*.html
+lcr_*.html
+diffraction_worksheet*.tex
+transformer_worksheet*.tex
+lcr_worksheet*.tex
