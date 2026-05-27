@@ -109,7 +109,34 @@ Alongside the simulation itself, a companion digital worksheet was developed usi
 
 The complete activity was tested locally on classroom systems before deployment. During this phase, practical deployment issues emerged, including file-format compatibility problems associated with macOS TextEdit saving HTML files in rich-text format. Additional instructions were added to ensure that simulations could be reliably executed in standard web browsers during classroom use.
 
+
 Overall, the Grade 10 diffraction case study demonstrated that the teacher-guided AI-assisted workflow could evolve from a technically functional visualization into a curriculum-aligned virtual laboratory through iterative refinement, pedagogical filtering, and classroom-oriented testing.
+
+\section{Case Study 2: Grade 12 Transformer and LCR Simulations}
+
+The second classroom case study involved the development of virtual laboratory activities for Grade 12 Physics, covering transformer behaviour and series LCR circuits. In contrast with the Grade 10 diffraction case, which required several rounds of refinement to establish a usable classroom format, the Grade 12 simulations were developed after the earlier interaction had already established a preferred design pattern for virtual laboratory tools. The teacher's prompts were therefore shorter and more operational, asking the AI system to create simulations in which transformer output voltage changed with primary and secondary turns, and in which LCR circuit quantities could be varied and observed in real time.
+
+For the transformer activity, the simulation used the ideal transformer relation as the central model,
+\begin{equation}
+\frac{V_s}{V_p}=\frac{N_s}{N_p},
+\end{equation}
+where $V_p$ and $V_s$ represent the primary and secondary voltages, and $N_p$ and $N_s$ represent the number of turns in the primary and secondary coils. The interface allowed students to vary input voltage and turn numbers using range sliders, while numerical voltage displays updated immediately. The simulation also classified the configuration dynamically as step-up, step-down, or approximately equal-voltage, helping students connect numerical ratios with practical transformer categories.
+
+A key visual feature of the transformer simulation was an HTML5 canvas representation of the core and coils. The primary and secondary coils were drawn on opposite sides of the core, with apparent turn density changing in response to the selected values of $N_p$ and $N_s$. A simple animated magnetic-flux representation used moving visual markers inside the core to indicate that changing magnetic flux links the two coils. Although the animation was not intended as a quantitative flux model, it provided a useful conceptual bridge between the transformer equation and Faraday's law of induction.
+
+The companion transformer worksheet was produced using fillable \LaTeX{} fields. Students recorded $V_p$, $N_p$, $N_s$, simulated $V_s$, and calculated theoretical $V_s$, allowing direct comparison with the ideal transformer law. The worksheet then extended the task beyond voltage ratios by introducing power, energy, and efficiency analysis. Students calculated input power, output power, percentage efficiency, and energy loss over a specified time interval using
+\begin{equation}
+\eta = \frac{P_{\mathrm{out}}}{P_{\mathrm{in}}}\times 100\% .
+\end{equation}
+This extension connected the ideal transformer relationship to more realistic discussions of heating, losses, and non-ideal energy transfer.
+
+The series LCR activity followed the same warm-start design logic. The simulation allowed students to vary circuit parameters such as resistance, inductance, capacitance, and frequency, while observing their effects on inductive reactance, capacitive reactance, impedance, and current. The central relationships were
+\begin{equation}
+X_L=\omega L, \qquad X_C=\frac{1}{\omega C}, \qquad Z=\sqrt{R^2+(X_L-X_C)^2}.
+\end{equation}
+Real-time numerical displays functioned like digital meters, helping students connect changes in circuit parameters with observable AC circuit behaviour. The accompanying worksheet guided students to compare calculated and simulated values, identify resonance-related trends, and interpret how the balance between $X_L$ and $X_C$ affects total impedance.
+
+Taken together, the transformer and LCR activities served as warm-start examples within the broader teacher--AI co-development process. Because interface expectations, worksheet format, and classroom usability preferences had already been established during the diffraction case, the Grade 12 tools required fewer corrective turns before becoming usable. This suggested that sustained conversational context could support continuity of design style across multiple physics topics, while the teacher still remained responsible for checking the physical interpretation, parameter ranges, and classroom suitability of the generated materials.
 
 \ack{Sample text inserted for demonstration.}
 
