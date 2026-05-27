@@ -93,6 +93,24 @@ Grade 12 & Series LCR circuit & Warm-start development & Real-time reactance, im
 \end{tabular}
 \end{table}
 
+\section{Case Study 1: Diffraction Simulation (Grade 10)}
+
+The first classroom case study focused on the development of a virtual single-slit diffraction laboratory for Grade 10 Advance Physics. The activity was designed to support conceptual visualization of wave diffraction while simultaneously introducing students to measurement-based investigation and basic experimental uncertainty analysis. The simulation was intended to complement the existing curriculum module on wave optics by allowing students to dynamically manipulate wavelength ($\lambda$), slit width ($a$), and screen distance ($D$) and observe the resulting changes in the diffraction pattern.
+
+The initial AI-generated prototype successfully reproduced the general diffraction pattern but required substantial refinement before classroom deployment. Early versions suffered from limited fringe visibility, unrealistic scaling behavior, and insufficient measurement precision for use as a laboratory activity. As a result, the development process shifted from simply producing a visual demonstration to constructing a classroom-oriented virtual experiment.
+
+One major refinement involved improving the visibility of secondary diffraction fringes. The original intensity distribution caused higher-order fringes to become too dim for reliable observation when projected in a classroom setting. To address this issue, brightness scaling and gamma-style visual enhancement were introduced to increase contrast while preserving the overall diffraction structure. This adjustment improved student ability to distinguish fringe boundaries and identify the central maximum during measurement tasks.
+
+A second major pedagogical modification involved the addition of a calibrated on-screen ruler. The initial simulation allowed students to observe pattern changes qualitatively, but it did not support quantitative measurement. A digital ruler overlay was therefore incorporated so that students could measure the width of the central maximum directly on the screen. This transformed the activity from a passive visualization into an interactive virtual laboratory in which students could compare measured values against theoretical predictions based on diffraction relationships.
+
+The simulation also required repeated adjustments to scaling and zoom behavior. In early versions, some parameter combinations generated patterns that were either too compressed to measure accurately or too wide to remain visible on the display window. The zoom and parameter ranges were therefore constrained to maintain observable fringe structures across the intended classroom operating range. These modifications ensured that students could perform measurements consistently without losing the physical relationship between the variables.
+
+Alongside the simulation itself, a companion digital worksheet was developed using fillable \LaTeX{} forms. The worksheet guided students through prediction, observation, measurement, and comparison tasks while integrating simple error-analysis exercises. Students were asked to record measured fringe widths, compare them with expected trends, and explain how changing physical variables altered the diffraction pattern. The worksheet therefore functioned as a structured inquiry tool rather than merely a record sheet.
+
+The complete activity was tested locally on classroom systems before deployment. During this phase, practical deployment issues emerged, including file-format compatibility problems associated with macOS TextEdit saving HTML files in rich-text format. Additional instructions were added to ensure that simulations could be reliably executed in standard web browsers during classroom use.
+
+Overall, the Grade 10 diffraction case study demonstrated that the teacher-guided AI-assisted workflow could evolve from a technically functional visualization into a curriculum-aligned virtual laboratory through iterative refinement, pedagogical filtering, and classroom-oriented testing.
+
 \ack{Sample text inserted for demonstration.}
 
 \funding{Sample text inserted for demonstration.}
