@@ -1,6 +1,6 @@
 # Teacher-guided AI-assisted development of virtual physics laboratories
 
-Working repository for the paper:
+Public proof-of-concept and evidence repository for the paper:
 
 > Teacher-guided AI-assisted development of virtual physics laboratories: classroom case studies from secondary physics
 
@@ -12,6 +12,8 @@ Working repository for the paper:
 - `source_materials/surveys/` - student feedback and survey files.
 - `source_materials/classroom_notes/` - supporting classroom notes.
 - `journal_template/` - original IOP LaTeX template and author guidance.
+
+Raw student response workbooks are not stored in this public repository. Survey evidence is provided only in aggregate or de-identified form.
 
 ## Build
 
