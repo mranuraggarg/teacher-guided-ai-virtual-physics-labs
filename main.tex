@@ -9,7 +9,7 @@
 
 \articletype{Paper} %	 e.g. Paper, Letter, Topical Review...
 
-\title{Teacher-guided AI-assisted development of a virtual single-slit diffraction laboratory for Grade 10 physics: a classroom case study}
+\title{Teacher-guided AI-assisted development of virtual physics laboratories: classroom case studies from secondary physics}
 
 \author{Anurag Garg$^1$\orcid{0000-0001-9448-3960}}
 
@@ -19,18 +19,21 @@
 
 \email{anurag.garg@moe.sch.ae}
 
-\keywords{Physics education, Generative AI, Virtual laboratories, Single-slit diffraction, Co-creation, Human-in-the-loop pedagogy}
+\keywords{Physics education, Generative AI, Virtual laboratories, Single-slit diffraction, Transformer simulation, Human-in-the-loop pedagogy}
 
 \begin{abstract}
-This classroom case study describes the teacher-guided AI-assisted development of a virtual single-slit diffraction laboratory for Grade 10 physics. A generative AI system was used as a rapid prototyping partner to create and iteratively refine an interactive simulation, on-screen measurement ruler, and supporting digital laboratory worksheet. The development process was shaped by repeated teacher feedback on classroom usability, conceptual accessibility, visual clarity, measurement precision, and error analysis. The final activity allowed students to vary wavelength, slit width, and screen distance, observe the resulting diffraction pattern, measure the central maximum, and compare measured values with the theoretical relation. Classroom implementation and exploratory student feedback are discussed in terms of engagement, visualization, usability, and perceived support for experimental understanding. The case illustrates how generative AI can support physics teachers in developing curriculum-linked virtual laboratory activities when the teacher remains central in directing the pedagogy, checking the physics, and adapting the tool for learners.
+This classroom case study examines the teacher-guided AI-assisted development of virtual physics laboratory activities for secondary education. A generative AI system was used as a rapid prototyping partner to create and iteratively refine interactive simulations, digital measurement tools, and supporting laboratory worksheets for Grade 10 and Grade 12 physics. The first case study focused on the development of a single-slit diffraction laboratory emphasizing conceptual visualization, measurement calibration, and error analysis. A second case study involving transformer simulation development demonstrated how previously established design patterns and pedagogical expectations enabled substantially faster refinement using simpler prompts. Classroom implementation and exploratory student feedback are discussed in relation to engagement, usability, visualization, and perceived support for experimental understanding. The study highlights how generative AI may support rapid development of curriculum-linked virtual laboratories when the teacher remains central in directing pedagogy, verifying physics content, and adapting tools for learners.
 \end{abstract}
 
 \section{Introduction}
-Interactive simulations and virtual laboratories have become increasingly important tools in physics education, particularly for topics involving abstract processes, dynamic systems, or experiments that are difficult to reproduce consistently in school laboratories. Simulations can support conceptual visualization, inquiry-based learning, and rapid exploration of relationships between physical variables. However, the development of custom educational simulations often requires programming experience, substantial preparation time, and repeated testing to ensure that the final tool remains pedagogically suitable for classroom use.
 
-Recent advances in generative artificial intelligence (AI) systems have introduced new possibilities for rapid prototyping of educational materials, including code generation, worksheet design, and interactive visualization tools. Despite growing interest in AI-assisted educational development, much of the discussion remains focused either on the technical capabilities of AI systems or on concerns surrounding their use in education. Comparatively fewer studies have examined how physics teachers may iteratively collaborate with generative AI systems to create classroom-oriented learning tools while retaining pedagogical control over the design process.
+Interactive simulations and virtual laboratories have become increasingly important tools in physics education, particularly for topics involving abstract processes, dynamic systems, or experiments that are difficult to reproduce consistently in school laboratories. Simulations can support conceptual visualization, inquiry-based learning, and rapid exploration of relationships between physical variables. The educational value of interactive physics simulations has been demonstrated through projects such as PhET, which emphasized visualization, interactivity, and conceptual exploration in physics teaching \cite{finkelstein2006}. Earlier work on simulation-based learning environments also highlighted the importance of teacher support and authoring workflows during simulation development \cite{vanjoolingen1997}. Research reviews have further reported positive learning effects of computer simulations in science education when they are carefully integrated into instruction and inquiry activities \cite{rutten2012}. However, the development of custom educational simulations often requires programming experience, substantial preparation time, and repeated testing to ensure that the final tool remains pedagogically suitable for classroom use.
 
-This paper presents two classroom case studies involving teacher-guided AI-assisted development of virtual physics laboratory activities for secondary education. In the first case, a Grade 10 single-slit diffraction simulation was iteratively developed to support visualization, measurement, and error analysis during a diffraction laboratory activity. In the second case, a Grade 12 transformer simulation was developed using a substantially shorter prompting process after design patterns and pedagogical expectations had already been established through the earlier interaction. Together, these cases provide insight into how generative AI may function as a rapid prototyping partner during simulation development while highlighting the continuing importance of teacher guidance, physics verification, and classroom adaptation.
+Within secondary physics curricula, topics such as single-slit diffraction require students to simultaneously interpret how wavelength ($\lambda$), slit width ($a$), and screen distance ($D$) influence the width of the central maximum. Although textbook diagrams provide static representations of diffraction patterns, students often have limited opportunities to dynamically manipulate these variables or conduct measurement-based exploration during regular classroom instruction. Consequently, converting a visualization into a usable classroom laboratory frequently requires additional features such as calibrated measurement tools, constrained physical parameter ranges, and worksheet integration.
+
+Recent advances in generative artificial intelligence (AI) systems have introduced new possibilities for rapid prototyping of educational materials, including code generation, worksheet design, and interactive visualization tools. Current research in AI in education has explored both the opportunities and limitations associated with these technologies \cite{holmes2022}. Studies have also highlighted the evolving role of teachers in AI-supported educational design and implementation \cite{celik2022}. At the same time, generative AI has raised new questions regarding instructional design, hybrid authorship, and collaborative human--AI workflows in educational settings \cite{hodges2023}. Despite growing interest in AI-assisted educational development, comparatively fewer studies have examined how physics teachers may iteratively collaborate with generative AI systems to create classroom-oriented learning tools while retaining pedagogical control over the design process.
+
+This paper presents two classroom case studies involving teacher-guided AI-assisted development of virtual physics laboratory activities for secondary education. In the first case, a Grade 10 single-slit diffraction simulation was iteratively developed to support visualization, measurement, and error analysis during a diffraction laboratory activity. The development process involved repeated refinement of fringe visibility, parameter ranges, measurement calibration, and digital worksheet integration to align the simulation with classroom requirements. In the second case, a Grade 12 transformer simulation was developed using a substantially shorter prompting process after design patterns and pedagogical expectations had already been established through the earlier interaction. Together, these cases provide insight into how generative AI may function as a rapid prototyping partner during simulation development while highlighting the continuing importance of teacher guidance, physics verification, and classroom adaptation.
 
 Rather than treating AI as an autonomous educational designer, this study examines a collaborative workflow in which the teacher repeatedly evaluated outputs, corrected unsuitable features, refined the classroom usability of the simulations, and integrated the resulting tools into curriculum-linked learning activities. The paper focuses on the development workflow, classroom implementation, and exploratory student feedback associated with these AI-assisted virtual laboratories.
 
@@ -78,7 +81,27 @@ Data row 3 & 3.0 & 3.5 & 4.0 \\
 \suppdata{Sample text inserted for demonstration.}
 
 
+
 \section*{References}
+
+\begin{thebibliography}{9}
+
+\bibitem{finkelstein2006}
+Finkelstein N, Adams W, Keller C, Perkins K and Wieman C 2006 \textit{High-Tech Tools for Teaching Physics: The Physics Education Technology Project} Journal of Online Learning and Teaching \textbf{2}(3)
+
+\bibitem{vanjoolingen1997}
+van Joolingen W 1997 \textit{The Authoring Environment SIMQUEST and the Need for Author Support} in de Jong A J M (ed) \textit{Supporting Authors in the Design of Simulation Based Learning Environments} (Enschede: University of Twente) pp 1--13
+
+\bibitem{holmes2022}
+Holmes W and Tuomi I 2022 \textit{State of the Art and Practice in AI in Education} European Journal of Education \textbf{57}(4) 542--570
+
+\bibitem{celik2022}
+Celik I, Dindar M, Muukkonen H and Jarvela S 2022 \textit{The Promises and Challenges of Artificial Intelligence for Teachers: A Systematic Review of Research} TechTrends \textbf{66}(4) 616--630
+
+\bibitem{hodges2023}
+Hodges C B and Kirschner P A 2023 \textit{Innovation of Instructional Design and Assessment in the Age of Generative Artificial Intelligence} TechTrends \textbf{68}(1) 195--199
+
+\end{thebibliography}
 
 
 
