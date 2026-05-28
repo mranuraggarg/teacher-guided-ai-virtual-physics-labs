@@ -1,6 +1,7 @@
 %This is a template file for use of iopjournal.cls
 
 \documentclass{iopjournal}
+\usepackage{graphicx}
 
 % Options
 % 	[anonymous]	Provides output without author names, affiliations or acknowledgments to facilitate double-anonymous peer-review
@@ -97,6 +98,13 @@ Grade 12 & Series LCR circuit & Warm-start development & Real-time reactance, im
 
 The first classroom case study focused on the development of a virtual single-slit diffraction laboratory for Grade 10 Advance Physics. The activity was designed to support conceptual visualization of wave diffraction while simultaneously introducing students to measurement-based investigation and basic experimental uncertainty analysis. The simulation was intended to complement the existing curriculum module on wave optics by allowing students to dynamically manipulate wavelength ($\lambda$), slit width ($a$), and screen distance ($D$) and observe the resulting changes in the diffraction pattern.
 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\linewidth]{../../assets/figures/simulations/figure_diffraction_simulation_interface.png}
+\caption{Grade 10 single-slit diffraction simulation interface showing slider-controlled wavelength, slit width, and screen distance together with the visual diffraction pattern and measurement support.}
+\label{fig:diffraction_interface}
+\end{figure}
+
 The initial AI-generated prototype successfully reproduced the general diffraction pattern but required substantial refinement before classroom deployment. Early versions suffered from limited fringe visibility, unrealistic scaling behavior, and insufficient measurement precision for use as a laboratory activity. As a result, the development process shifted from simply producing a visual demonstration to constructing a classroom-oriented virtual experiment.
 
 One major refinement involved improving the visibility of secondary diffraction fringes. The original intensity distribution caused higher-order fringes to become too dim for reliable observation when projected in a classroom setting. To address this issue, brightness scaling and gamma-style visual enhancement were introduced to increase contrast while preserving the overall diffraction structure. This adjustment improved student ability to distinguish fringe boundaries and identify the central maximum during measurement tasks.
@@ -124,6 +132,13 @@ where $V_p$ and $V_s$ represent the primary and secondary voltages, and $N_p$ an
 
 A key visual feature of the transformer simulation was an HTML5 canvas representation of the core and coils. The primary and secondary coils were drawn on opposite sides of the core, with apparent turn density changing in response to the selected values of $N_p$ and $N_s$. A simple animated magnetic-flux representation used moving visual markers inside the core to indicate that changing magnetic flux links the two coils. Although the animation was not intended as a quantitative flux model, it provided a useful conceptual bridge between the transformer equation and Faraday's law of induction.
 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\linewidth]{../../assets/figures/simulations/figure_transformer_simulation_interface.png}
+\caption{Grade 12 transformer simulation interface showing live primary and secondary voltage readouts, turn-number controls, and a canvas-based transformer core and coil representation.}
+\label{fig:transformer_interface}
+\end{figure}
+
 The companion transformer worksheet was produced using fillable \LaTeX{} fields. Students recorded $V_p$, $N_p$, $N_s$, simulated $V_s$, and calculated theoretical $V_s$, allowing direct comparison with the ideal transformer law. The worksheet then extended the task beyond voltage ratios by introducing power, energy, and efficiency analysis. Students calculated input power, output power, percentage efficiency, and energy loss over a specified time interval using
 \begin{equation}
 \eta = \frac{P_{\mathrm{out}}}{P_{\mathrm{in}}}\times 100\% .
@@ -135,6 +150,13 @@ The series LCR activity followed the same warm-start design logic. The simulatio
 X_L=\omega L, \qquad X_C=\frac{1}{\omega C}, \qquad Z=\sqrt{R^2+(X_L-X_C)^2}.
 \end{equation}
 Real-time numerical displays functioned like digital meters, helping students connect changes in circuit parameters with observable AC circuit behaviour. The accompanying worksheet guided students to compare calculated and simulated values, identify resonance-related trends, and interpret how the balance between $X_L$ and $X_C$ affects total impedance.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\linewidth]{../../assets/figures/simulations/figure_lcr_simulation_interface.png}
+\caption{Grade 12 series LCR circuit simulation interface showing adjustable resistance, inductance, capacitance, and frequency controls together with real-time digital meter displays.}
+\label{fig:lcr_interface}
+\end{figure}
 
 
 Taken together, the transformer and LCR activities served as warm-start examples within the broader teacher--AI co-development process. Because interface expectations, worksheet format, and classroom usability preferences had already been established during the diffraction case, the Grade 12 tools required fewer corrective turns before becoming usable. This suggested that sustained conversational context could support continuity of design style across multiple physics topics, while the teacher still remained responsible for checking the physical interpretation, parameter ranges, and classroom suitability of the generated materials.
