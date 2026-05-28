@@ -6,14 +6,68 @@ Public proof-of-concept and evidence repository for the paper:
 
 ## Repository structure
 
-- `manuscript/` - current IOP manuscript source, class file, ORCID asset, and compiled PDF.
-- `source_materials/` - classroom evidence and development materials used while preparing the paper.
-- `source_materials/ai_transcripts/` - AI interaction archives and related media.
-- `source_materials/surveys/` - student feedback and survey files.
-- `source_materials/classroom_notes/` - supporting classroom notes.
-- `journal_template/` - original IOP LaTeX template and author guidance.
+The repository is organized to separate manuscript files, simulation source code, worksheets, and supporting classroom evidence.
 
-Raw student response workbooks are not stored in this public repository. Survey evidence is provided only in aggregate or de-identified form.
+```text
+teacher-guided-ai-virtual-physics-labs/
+│
+├── docs/
+│   ├── manuscript/
+│   │   ├── main.tex                # Current IOP manuscript source
+│   │   ├── main.pdf                # Compiled manuscript PDF
+│   │   ├── iopjournal.cls          # IOP journal class file
+│   │   └── orcid.pdf               # ORCID asset used in manuscript
+│   │
+│   └── templates/
+│       ├── iopjournal-template.tex # Original journal template
+│       ├── iopjournal-guidelines.pdf
+│       └── supporting template assets
+│
+├── simulations/
+│   ├── diffraction/
+│   │   ├── diffraction_sim_final.html
+│   │   └── earlier development versions
+│   │
+│   ├── transformer/
+│   │   ├── transformer_sim_final.html
+│   │   └── earlier development versions
+│   │
+│   └── lcr/
+│       ├── lcr_sim_final.html
+│       └── earlier development versions
+│
+├── worksheets/
+│   ├── diffraction/
+│   │   ├── diffraction_worksheet_final.tex
+│   │   └── earlier worksheet versions
+│   │
+│   ├── transformer/
+│   │   └── transformer_worksheet_final.tex
+│   │
+│   └── lcr/
+│       ├── lcr_worksheet_final.tex
+│       └── earlier worksheet versions
+│
+├── assets/
+│   ├── transcripts/
+│   │   └── AI interaction archives and development conversations
+│   │
+│   ├── surveys/
+│   │   └── student feedback and survey summaries
+│   │
+│   └── classroom_notes/
+│       └── supporting implementation notes
+│
+└── README.md
+```
+
+### Main resources
+
+- Final classroom-ready simulations are located in `simulations/*/*_final.html`
+- Final worksheets are located in `worksheets/*/*_final.tex`
+- The current manuscript source is `docs/manuscript/main.tex`
+- The compiled manuscript PDF is `docs/manuscript/main.pdf`
+- Earlier simulation and worksheet versions are preserved to document the iterative teacher--AI co-development process described in the paper.
 
 ## Build
 
