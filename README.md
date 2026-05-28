@@ -1,8 +1,16 @@
 # Teacher-guided AI-assisted development of virtual physics laboratories: classroom case studies in secondary physics
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20425377.svg)](https://doi.org/10.5281/zenodo.20425377)
+
 Public proof-of-concept and evidence repository for the paper:
 
 > Teacher-guided AI-assisted development of virtual physics laboratories: classroom case studies in secondary physics
+
+## Citation and DOI
+
+This repository is archived on Zenodo and assigned a DOI for long-term preservation and citation.
+
+**DOI:** https://doi.org/10.5281/zenodo.20425377
 
 ## Repository structure
 
